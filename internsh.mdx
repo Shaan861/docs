@@ -1,0 +1,116 @@
+---
+title: "Authentication & First API Call Quickstart"
+description: "  Take your first steps with the Waves API."
+---
+
+- Learn how to authenticate and make your first API call on  **_Waves _**API. _Waves _provide speech-AI feature like  _TTS_ (Text to speech) and _STT  _(Speech to text).
+
+### Endpoint & Method
+
+```bash
+POST https://waves-api.smallest.ai/v4/health
+```
+
+### Required Headers
+
+- _Authorization_ : Bearer  YOUR_API_KEY
+- _Content-Type_: application/json
+- _Accept_: application/json
+
+### Sample Request
+
+<RequestExample>
+
+```python python
+import requests
+
+url = "https://waves-api.smallest.ai/v4/health"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+}
+
+response = requests.post(url,headers=headers)
+print(response.json())
+```
+
+
+```bash curl
+curl -X POST "https://waves-api.smallest.ai/v4/health" \
+-H "Authorization: Bearer YOUR_API_KEY" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json"
+```
+
+</RequestExample>
+
+<Note>
+  Replace YOUR_API_KEY with your  API key from WAVES dashboard.
+</Note>
+
+### Sample Response
+
+<ResponseExample>
+
+```json json
+{
+  "status": "ok",
+  "message": "API connection successful"
+}
+```
+
+</ResponseExample>
+
+- A succesfull response confirms that your API key is valid and the wave service is reachable
+
+### TIPS
+
+<Tip>
+  - If you recieve a 401 unauthorized erroe, make sure your API is correct and included in with authorization header
+  - The /health endpoint id only for testing connectivity.once confirmed,Use other waves endpoints for real TTS ans STT tasks
+</Tip>
+
+
+## Let's Build
+
+<Steps>
+  <Step title="API KEY">
+    Get your API key from **Waves** dashboard
+
+    <Accordion title="Whats an API key">
+      It is unique code that identifies the user,which  allows you to access the API.
+    </Accordion>
+  </Step>
+  <Step title="Prepare the request" iconType="thin">
+    Use  the given Endpoint ,Method and Headers for your code.
+
+    <AccordionGroup>
+      <Accordion title="What's Endpoint,Method and Headers?">
+        - Endpoint: A specific URL where you send your API request
+        - Method:Tells the API what to perform
+        - Headers: Extra details the API needs along with your request.
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+  <Step title="Send your first request">
+    Run the code in your preffered language-It  sends a request to the API
+  </Step>
+  <Step title="Your first response ">
+    Voila!! you got your first response from the API
+
+    <CodeGroup>
+
+    ```json response
+    {
+      "status": "ok",
+      "message": "API connection successful"
+    }
+    ```
+
+    </CodeGroup>
+  </Step>
+  <Step title="Now you can start usIng Waves other Endpoints">
+    Now you are ready to use other endpoints of **_Waves_**
+  </Step>
+</Steps>
