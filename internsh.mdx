@@ -3,7 +3,7 @@ title: "Authentication & First API Call Quickstart"
 description: "  Take your first steps with the Waves API."
 ---
 
-- Learn how to authenticate and make your first API call on  **_Waves _**API. _Waves _provide speech-AI feature like  _TTS_ (Text to speech) and _STT  _(Speech to text).
+- Learn how to authenticate and make your first API call on  **Waves **API. Waves provide speech-AI feature like  _TTS_ (Text to speech) and **STT  ** (Speech to text).
 
 ### Endpoint & Method
 
@@ -19,7 +19,7 @@ POST https://waves-api.smallest.ai/v4/health
 
 ### Sample Request
 
-<RequestExample>
+<CodeGroup>
 
 ```python python
 import requests
@@ -43,7 +43,7 @@ curl -X POST "https://waves-api.smallest.ai/v4/health" \
 -H "Accept: application/json"
 ```
 
-</RequestExample>
+</CodeGroup>
 
 <Note>
   Replace YOUR_API_KEY with your  API key from WAVES dashboard.
@@ -51,26 +51,14 @@ curl -X POST "https://waves-api.smallest.ai/v4/health" \
 
 ### Sample Response
 
-<ResponseExample>
-
-```json json
+```json
 {
   "status": "ok",
   "message": "API connection successful"
 }
 ```
 
-</ResponseExample>
-
 - A succesfull response confirms that your API key is valid and the wave service is reachable
-
-### TIPS
-
-<Tip>
-  - If you recieve a 401 unauthorized erroe, make sure your API is correct and included in with authorization header
-  - The /health endpoint id only for testing connectivity.once confirmed,Use other waves endpoints for real TTS ans STT tasks
-</Tip>
-
 
 ## Let's Build
 
@@ -114,3 +102,8 @@ curl -X POST "https://waves-api.smallest.ai/v4/health" \
     Now you are ready to use other endpoints of **_Waves_**
   </Step>
 </Steps>
+
+<Tip>
+  - If you recieve a 401 unauthorized error, make sure your API is correct and included in with authorization header
+  - The /health endpoint id only for testing connectivity.once confirmed,Use other waves endpoints for real TTS ans STT tasks
+</Tip>
