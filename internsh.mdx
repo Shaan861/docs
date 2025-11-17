@@ -1,9 +1,9 @@
 ---
 title: "Authentication & First API Call Quickstart"
-description: "  Take your first steps with the Waves API."
+description: "  Take your first steps with  Waves API."
 ---
 
-- Learn how to authenticate and make your first API call on  **Waves** API. Waves  provide speech-AI feature like  _TTS_ (Text to speech) and  _STT_ (Speech to text).
+- Learn how to authenticate and make your first API call on  **Waves** API. Waves  provides speech-AI  feature  like  _TTS _ (Text to speech)  and  _STT_ (Speech to text).
 
 ### Endpoint & Method
 
@@ -13,7 +13,7 @@ POST https://waves-api.smallest.ai/v4/health
 
 ### Required Headers
 
-- _Authorization_ : Bearer  YOUR_API_KEY
+- _Authorization_: Bearer  YOUR_API_KEY
 - _Content-Type_:  application/json
 - _Accept_:  application/json
 
@@ -66,15 +66,15 @@ curl -X POST "https://waves-api.smallest.ai/v4/health" \
   <Step title="API KEY">
     Get your API key from **Waves** dashboard
 
-    <Accordion title="Whats an API key">
-      It is unique code that identifies the user,which  allows you to access the API.
+    <Accordion title="What's an API key">
+      It is unique code that identifies the user, which  allows you to access the API.
     </Accordion>
   </Step>
   <Step title="Prepare the request" iconType="thin">
     Use  the given Endpoint ,Method and Headers for your code.
 
     <AccordionGroup>
-      <Accordion title="What's Endpoint,Method and Headers?">
+      <Accordion title="What are Endpoint,Method and Headers?">
         - Endpoint: A specific URL where you send your API request
         - Method:Tells the API what to perform
         - Headers: Extra details the API needs along with your request.
@@ -89,7 +89,7 @@ curl -X POST "https://waves-api.smallest.ai/v4/health" \
     </Accordion>
   </Step>
   <Step title="Your first response ">
-    Voila!! you got your first response from the API
+    congrats, you got your first response from the API
 
     <CodeGroup>
 
@@ -109,5 +109,5 @@ curl -X POST "https://waves-api.smallest.ai/v4/health" \
 
 <Tip>
   - If you recieve a 401 unauthorized error, make sure your API is correct and included in with authorization header
-  - The /health endpoint id only for testing connectivity.once confirmed,Use other waves endpoints for real TTS ans STT tasks
+  - The /health endpoint is only for testing connectivity.once confirmed,Use other waves endpoints for real TTS ans STT tasks
 </Tip>
